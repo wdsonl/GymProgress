@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
 
     private ImageButton peitoBt;
-//kkkkk 1123123
-    //kkkkk1
+    private ImageButton costasBt;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,12 +44,19 @@ public class MainActivity extends AppCompatActivity {
         peitoBt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), PeitoActivity.class);
-                startActivity(intent);
+                Intent peito = new Intent(getApplicationContext(), PeitoActivity.class);
+                startActivity(peito);
             }
         });
 
-
+        costasBt = findViewById(R.id.costasBt);
+        costasBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent costas = new Intent(getApplicationContext(), CostasActivity.class);
+                startActivity(costas);
+            }
+        });
 
     }
 
