@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
     private ImageButton peitoBt;
     private ImageButton costasBt;
+    private ImageButton pernaBt;
+    private ImageButton bracoBt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +57,24 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent costas = new Intent(getApplicationContext(), CostasActivity.class);
                 startActivity(costas);
+            }
+        });
+
+        pernaBt = findViewById(R.id.pernaBt);
+        pernaBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent perna = new Intent(getApplicationContext(), PernaActivity.class);
+                startActivity(perna);
+            }
+        });
+
+        bracoBt = findViewById(R.id.bracoBt);
+        bracoBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent braco = new Intent(getApplicationContext(), BracoActivity.class);
+                startActivity(braco);
             }
         });
 

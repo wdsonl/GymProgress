@@ -32,13 +32,14 @@
             android:id="@+id/peitoBt"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginEnd="175dp"
             android:backgroundTint="#E6232426"
             android:scaleType="fitCenter"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/pernaBt"
+            app:layout_constraintEnd_toStartOf="@+id/costasBt"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
             app:srcCompat="@drawable/peito_img" />
 
         <TextView
@@ -57,13 +58,14 @@
             android:id="@+id/costasBt"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginStart="175dp"
             android:backgroundTint="#E6232426"
             android:scaleType="fitCenter"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/bracoBt"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/peitoBt"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
             app:srcCompat="@drawable/costas_img" />
 
         <TextView
@@ -77,6 +79,58 @@
             app:layout_constraintEnd_toEndOf="@+id/costasBt"
             app:layout_constraintStart_toStartOf="@+id/costasBt"
             app:layout_constraintTop_toTopOf="@+id/costasBt" />
+
+        <ImageButton
+            android:id="@+id/pernaBt"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:backgroundTint="#E6232426"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/bracoBt"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/peitoBt"
+            app:layout_constraintVertical_bias="0.5"
+            app:srcCompat="@drawable/perna_img" />
+
+        <TextView
+            android:id="@+id/textViewPerna"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Treino de perna"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/pernaBt"
+            app:layout_constraintEnd_toEndOf="@+id/pernaBt"
+            app:layout_constraintStart_toStartOf="@+id/pernaBt"
+            app:layout_constraintTop_toTopOf="@+id/pernaBt" />
+
+        <ImageButton
+            android:id="@+id/bracoBt"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:backgroundTint="#E6232426"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/pernaBt"
+            app:layout_constraintTop_toBottomOf="@+id/costasBt"
+            app:layout_constraintVertical_bias="0.5"
+            app:srcCompat="@drawable/braco_img" />
+
+        <TextView
+            android:id="@+id/textViewBraco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Treino de braço"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/bracoBt"
+            app:layout_constraintEnd_toEndOf="@+id/bracoBt"
+            app:layout_constraintStart_toStartOf="@+id/bracoBt"
+            app:layout_constraintTop_toTopOf="@+id/bracoBt" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

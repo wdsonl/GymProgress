@@ -15,6 +15,20 @@
         android:theme="@style/Theme.GymProgress"
         tools:targetApi="31">
         <activity
+            android:name=".BracoActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".PernaActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".CostasActivity"
             android:exported="false">
             <meta-data
