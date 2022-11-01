@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
 
-    private Button muzyBt;
 
 
 
@@ -39,14 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         setSupportActionBar(binding.toolbar);
 
-        muzyBt = findViewById(R.id.muzyBt);
-        muzyBt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent muzyIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=gzFxpIWMqk0"));
-                startActivity(muzyIntent);
-            }
-        });
+
 
     }
 

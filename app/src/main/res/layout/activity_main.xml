@@ -23,14 +23,38 @@
 
     <include layout="@layout/content_main" />
 
-    <Button
-        android:id="@+id/muzyBt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:backgroundTint="#252525"
-        android:text="Muzyyyy"
-        android:textStyle="bold" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/peitoBt"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:backgroundTint="#E6232426"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/quadrado" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Treino de peito"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_anchor="@+id/constraintLayout"
+            app:layout_anchorGravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/peitoBt"
+            app:layout_constraintEnd_toEndOf="@+id/peitoBt"
+            app:layout_constraintStart_toStartOf="@+id/peitoBt"
+            app:layout_constraintTop_toTopOf="@+id/peitoBt" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
