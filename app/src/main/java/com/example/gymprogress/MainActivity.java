@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ImageButton peitoBt;
 //kkkkk 1123123
+    //kkkkk1
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
