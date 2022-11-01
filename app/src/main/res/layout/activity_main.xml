@@ -32,20 +32,21 @@
             android:id="@+id/peitoBt"
             android:layout_width="150dp"
             android:layout_height="150dp"
+            android:layout_marginEnd="175dp"
             android:backgroundTint="#E6232426"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/quadrado" />
+            app:srcCompat="@drawable/peito_img" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textViewPeito"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Treino de peito"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textStyle="bold"
             app:layout_anchor="@+id/constraintLayout"
             app:layout_anchorGravity="center"
@@ -53,6 +54,33 @@
             app:layout_constraintEnd_toEndOf="@+id/peitoBt"
             app:layout_constraintStart_toStartOf="@+id/peitoBt"
             app:layout_constraintTop_toTopOf="@+id/peitoBt" />
+
+        <ImageButton
+            android:id="@+id/costasBt"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="175dp"
+            android:backgroundTint="#E6232426"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/costas_img" />
+
+        <TextView
+            android:id="@+id/textViewCostas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Treino de costas"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_anchor="@+id/constraintLayout"
+            app:layout_anchorGravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/costasBt"
+            app:layout_constraintEnd_toEndOf="@+id/costasBt"
+            app:layout_constraintStart_toStartOf="@+id/costasBt"
+            app:layout_constraintTop_toTopOf="@+id/costasBt" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
