@@ -12,12 +12,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#232426"
-        android:backgroundTint="#000000"
+        android:backgroundTint="#232426"
         android:theme="@style/Theme.GymProgress.AppBarOverlay">
 
     </com.google.android.material.appbar.AppBarLayout>
-
-    <include layout="@layout/content_main" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -118,11 +116,12 @@
 
         <TextView
             android:id="@+id/textViewBraco"
-            android:layout_width="wrap_content"
+            android:layout_width="90dp"
             android:layout_height="wrap_content"
-            android:text="Treino de braço"
+            android:text="Treino de braço/ombro"
             android:textColor="@color/white"
             android:textStyle="bold"
+            android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="@+id/bracoBt"
             app:layout_constraintEnd_toEndOf="@+id/bracoBt"
             app:layout_constraintStart_toStartOf="@+id/bracoBt"

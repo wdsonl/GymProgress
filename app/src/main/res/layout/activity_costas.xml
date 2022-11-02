@@ -9,6 +9,8 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#232426"
+        android:backgroundTint="#232426"
         android:theme="@style/Theme.GymProgress.AppBarOverlay">
 
         <androidx.appcompat.widget.Toolbar
@@ -16,6 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="#232426"
+            android:backgroundTint="#232426"
             app:popupTheme="@style/Theme.GymProgress.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>

@@ -9,6 +9,8 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#232426"
+        android:backgroundTint="#232426"
         android:theme="@style/Theme.GymProgress.AppBarOverlay">
 
         <androidx.appcompat.widget.Toolbar
@@ -16,6 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="#232426"
+            android:backgroundTint="#232426"
             app:popupTheme="@style/Theme.GymProgress.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -24,18 +27,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/TextViewLixo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Em manutenção ;)"
-            android:textSize="60dp"
-            android:textAlignment="center"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <Button
             android:id="@+id/voltarBt"
             android:layout_width="wrap_content"
@@ -43,8 +34,7 @@
             android:text="voltar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/TextViewLixo" />
+            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
