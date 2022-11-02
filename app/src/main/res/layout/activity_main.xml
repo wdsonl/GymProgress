@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#232426"
+        android:backgroundTint="#000000"
         android:theme="@style/Theme.GymProgress.AppBarOverlay">
 
     </com.google.android.material.appbar.AppBarLayout>
