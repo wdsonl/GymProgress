@@ -11,8 +11,8 @@
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#232426"
-        android:backgroundTint="#232426"
+        android:background="@color/gray"
+        android:backgroundTint="@color/gray"
         android:theme="@style/Theme.GymProgress.AppBarOverlay">
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -132,7 +132,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#232426"
+        android:background="@color/gray"
         app:layout_anchor="@+id/appBarLayout"
         app:layout_anchorGravity="center"
         app:popupTheme="@style/Theme.GymProgress.PopupOverlay" />

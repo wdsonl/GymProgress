@@ -21,8 +21,8 @@ public class BracoActivity extends AppCompatActivity {
         voltarBt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
+                Intent voltar = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(voltar);
             }
         });
     }

@@ -15,7 +15,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#232426"
+            android:background="@color/gray"
             app:popupTheme="@style/Theme.GymProgress.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -23,34 +23,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/nomeexercicio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Supino com barra:"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/kg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Kg"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/editTextPeso"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <EditText
-            android:id="@+id/editTextPeso"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:hint="Peso"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/nomeexercicio"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/voltarBt"
@@ -60,6 +32,16 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <ListView
+            android:id="@+id/listExercises"
+            android:layout_width="409dp"
+            android:layout_height="681dp"
+            android:layout_marginTop="110dp"
+            app:layout_constraintBottom_toTopOf="@+id/voltarBt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

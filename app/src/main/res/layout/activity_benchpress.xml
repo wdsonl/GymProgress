@@ -4,13 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PernaActivity">
+    tools:context=".BenchpressActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/gray"
-        android:backgroundTint="@color/gray"
         android:theme="@style/Theme.GymProgress.AppBarOverlay">
 
         <androidx.appcompat.widget.Toolbar
@@ -18,7 +16,6 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/gray"
-            android:backgroundTint="@color/gray"
             app:popupTheme="@style/Theme.GymProgress.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -27,27 +24,43 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/TextViewLixo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Em manutenção ;)"
-            android:textSize="60dp"
-            android:textAlignment="center"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <Button
             android:id="@+id/voltarBt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="voltar"
+            android:text="salvar e voltar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/benchpress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Peso bench press:"
+            app:layout_constraintBottom_toBottomOf="@+id/Pesobenchpress"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/TextViewLixo" />
+            app:layout_constraintTop_toTopOf="@+id/Pesobenchpress" />
+
+        <EditText
+            android:id="@+id/Pesobenchpress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="75dp"
+            android:hint="Peso"
+            android:inputType="numberDecimal"
+            app:layout_constraintStart_toEndOf="@+id/benchpress"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Kgbenchpress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kg"
+            app:layout_constraintBottom_toBottomOf="@+id/Pesobenchpress"
+            app:layout_constraintStart_toEndOf="@+id/Pesobenchpress"
+            app:layout_constraintTop_toTopOf="@+id/Pesobenchpress" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
