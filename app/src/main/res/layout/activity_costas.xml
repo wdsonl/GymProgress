@@ -8,10 +8,9 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@color/gray"
-        android:backgroundTint="@color/gray"
         android:theme="@style/Theme.GymProgress.AppBarOverlay"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,8 +20,6 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/gray"
-            android:backgroundTint="@color/gray"
             app:popupTheme="@style/Theme.GymProgress.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -35,14 +32,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <ListView
-        android:id="@+id/listViewXML"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/voltarBt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

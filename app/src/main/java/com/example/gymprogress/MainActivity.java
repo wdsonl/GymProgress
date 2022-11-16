@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
 
+import androidx.appcompat.widget.Toolbar;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -36,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -45,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
         peitoBt = findViewById(R.id.peitoBt);
         peitoBt.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent peito = new Intent(getApplicationContext(), PeitoActivity.class);
+            public void onClick(View v) {
+                Intent peito = new Intent(MainActivity.this, ExibePeito.class);
                 startActivity(peito);
             }
         });

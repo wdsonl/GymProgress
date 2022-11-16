@@ -47,7 +47,7 @@ public class exercise {
 
     @Override
     public String toString() {
-        return "/n" + exercise_name + ": "
+        return "\n" + exercise_name + ": "
                 + exercise_weight + " Kg";
     }
 }

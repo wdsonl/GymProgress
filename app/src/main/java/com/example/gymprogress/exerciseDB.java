@@ -2,13 +2,10 @@ package com.example.gymprogress;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
-import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
-
-import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
@@ -30,7 +27,7 @@ public class exerciseDB extends SQLiteOpenHelper {
                     + COLUNA2 + " TEXT,"
                     + COLUNA3 + " TEXT )";
 
-    public exerciseDB(Context context)
+    public exerciseDB(ExibePeito context)
     {
         super(context, db_name, null, db_version);
     }
@@ -102,6 +99,38 @@ public class exerciseDB extends SQLiteOpenHelper {
             return lista;//retorna o Array contendo os contatos
         } finally {
             db.close();//fecha a conexão
+        }
+    }
+
+    @SuppressLint("Range")
+    public exercise searchexercise(String typeExercise) {
+        SQLiteDatabase db = getWritableDatabase();
+        long id;
+        String exercise_name;
+        String exercise_weight;
+        String exercise_type;
+
+        try {
+            Cursor c = db.query(TABLE_NAME, null,"exercise_name=?", new String[]{typeExercise}, null, null, null, null);
+            if(c.moveToFirst()) {//verifica se o contato existe, se sim extrai os valores para criação  um objeto Contato com os valores
+                id = c.getLong(c.getColumnIndex("_id"));
+                exercise_name = c.getString(c.getColumnIndex("exercise_name"));
+                exercise_weight = c.getString(c.getColumnIndex("exercise_weight"));
+                exercise_type = c.getString(c.getColumnIndex("exercise_type"));
+                // Contato contato = new Contato(id, nome, telefone, email);
+            }
+            //Se não for encontrado, define  valores dummy para criação de um objeto
+            //pois o método retorna um objeto do tipo contato
+            else{
+                id = 0;
+                exercise_name = "dummy";
+                exercise_weight = "0" ;
+                exercise_type = "xxxxx";
+            }
+            exercise exercises = new exercise(id, exercise_name, exercise_weight, exercise_type);
+            return exercises;
+        } finally {
+            db.close();
         }
     }
 }
